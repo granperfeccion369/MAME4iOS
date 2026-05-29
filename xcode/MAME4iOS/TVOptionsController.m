@@ -154,19 +154,19 @@
         if ( indexPath.row == 0 ) {
             cell.textLabel.text = @"Filter";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.detailTextLabel.text = [Options.arrayFilter optionFind:op.filter];
+            cell.detailTextLabel.text = [Options.arrayFilter localizedNameForOption:[Options.arrayFilter optionFind:op.filter]];
         } else if ( indexPath.row == 1 ) {
             cell.textLabel.text   = @"Skin";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.detailTextLabel.text = [Options.arraySkin optionFind:op.skin];
+            cell.detailTextLabel.text = [Options.arraySkin localizedNameForOption:[Options.arraySkin optionFind:op.skin]];
         } else if ( indexPath.row == 2 ) {
             cell.textLabel.text   = @"Screen Shader";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.detailTextLabel.text = [Options.arrayScreenShader optionFind:op.screenShader];
+            cell.detailTextLabel.text = [Options.arrayScreenShader localizedNameForOption:[Options.arrayScreenShader optionFind:op.screenShader]];
         } else if ( indexPath.row == 3 ) {
             cell.textLabel.text   = @"Vector Shader";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.detailTextLabel.text = [Options.arrayLineShader optionFind:op.lineShader];
+            cell.detailTextLabel.text = [Options.arrayLineShader localizedNameForOption:[Options.arrayLineShader optionFind:op.lineShader]];
         } else if ( indexPath.row == 4 ) {
             cell.textLabel.text = @"Keep Aspect Ratio";
             cell.accessoryView = [self optionSwitchForKey:@"keepAspectRatio"];
@@ -207,11 +207,11 @@
         } else if ( indexPath.row == 6 ) {
             cell.textLabel.text   = @"Emulated Speed";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.detailTextLabel.text = [Options.arrayEmuSpeed optionAtIndex:op.emuspeed];
+            cell.detailTextLabel.text = [Options.arrayEmuSpeed localizedOptionAtIndex:op.emuspeed];
         } else if ( indexPath.row == 7 ) {
             cell.textLabel.text   = @"Sound";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.detailTextLabel.text = [Options.arraySoundValue optionAtIndex:op.soundValue];
+            cell.detailTextLabel.text = [Options.arraySoundValue localizedOptionAtIndex:op.soundValue];
         }
     } else if ( indexPath.section == kInputSection ) {
         cell.textLabel.text = @"Game Input";

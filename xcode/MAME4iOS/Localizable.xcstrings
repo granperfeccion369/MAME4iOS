@@ -1073,6 +1073,7 @@
     },
     "Dark Border" : {
       "comment" : "Dark Border",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -1107,6 +1108,7 @@
     },
     "Default" : {
       "comment" : "Default",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -1839,6 +1841,7 @@
     },
     "Light Border" : {
       "comment" : "Light Border",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -1856,6 +1859,7 @@
     },
     "Linear" : {
       "comment" : "Linear filter",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -1991,6 +1995,7 @@
     },
     "megaTron" : {
       "comment" : "megaTron shader",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -2008,6 +2013,7 @@
     },
     "Nearest" : {
       "comment" : "Nearest",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -2108,6 +2114,7 @@
     },
     "Off" : {
       "comment" : "Off",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -2125,6 +2132,7 @@
     },
     "On (11 KHz)" : {
       "comment" : "On (11 KHz)",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -2142,6 +2150,7 @@
     },
     "On (22 KHz)" : {
       "comment" : "On (22 KHz)",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -2159,6 +2168,7 @@
     },
     "On (33 KHz)" : {
       "comment" : "On (33 KHz)",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -2176,6 +2186,7 @@
     },
     "On (44 KHz)" : {
       "comment" : "On (44 KHz)",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -2193,6 +2204,7 @@
     },
     "On (48 KHz)" : {
       "comment" : "On (48 KHz)",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -2691,6 +2703,7 @@
     },
     "simpleTron" : {
       "comment" : "simpleTron shader",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {
@@ -3255,6 +3268,7 @@
     },
     "ulTron" : {
       "comment" : "ulTron shader",
+      "extractionState" : "stale",
       "localizations" : {
         "ja" : {
           "stringUnit" : {

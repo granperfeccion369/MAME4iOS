@@ -74,8 +74,8 @@
   // get the mame version from MYOSD, and remove any date in ()s
   NSString* mame_version = [@(myosd_version) componentsSeparatedByString:@" ("].firstObject;
   
-  NSString* app_version = [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleVersion"];
-  NSString* version_num = [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+  NSString* app_version = [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+  NSString* version_num = [NSBundle.mainBundle objectForInfoDictionaryKey:@"CFBundleVersion"];
 
   
   if (mame_version.length != 0)

@@ -134,28 +134,28 @@
                 {
                     cell.textLabel.text = NSLocalizedString(@"Filter", @"Settings: Video Section: Filter option");
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                    cell.detailTextLabel.text = [Options.arrayFilter optionFind:op.filter];
+                    cell.detailTextLabel.text = [Options.arrayFilter localizedNameForOption:[Options.arrayFilter optionFind:op.filter]];
                     break;
                 }
                 case 1:
                 {
                     cell.textLabel.text   = NSLocalizedString(@"Skin",@"Settings: Video Section: Skin option");
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                    cell.detailTextLabel.text = [Options.arraySkin optionFind:op.skin];
+                    cell.detailTextLabel.text = [Options.arraySkin localizedNameForOption:[Options.arraySkin optionFind:op.skin]];
                     break;
                 }
                 case 2:
                 {
                     cell.textLabel.text   = NSLocalizedString(@"Screen Shader", @"Settings: Video Section: Shader option");
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                    cell.detailTextLabel.text = [Options.arrayScreenShader optionFind:op.screenShader];
+                    cell.detailTextLabel.text = [Options.arrayScreenShader localizedNameForOption:[Options.arrayScreenShader optionFind:op.screenShader]];
                     break;
                 }
                 case 3:
                 {
                     cell.textLabel.text   = NSLocalizedString(@"Vector Shader",@"Settings: Video Section: Vector shader option");
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                    cell.detailTextLabel.text = [Options.arrayLineShader optionFind:op.lineShader];
+                    cell.detailTextLabel.text = [Options.arrayLineShader localizedNameForOption:[Options.arrayLineShader optionFind:op.lineShader]];
                     break;
                 }
                case 4:
@@ -268,14 +268,14 @@
                 {
                      cell.textLabel.text = NSLocalizedString(@"Emulated Speed", @"Adjust the speed of emulation");
                      cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                     cell.detailTextLabel.text = [Options.arrayEmuSpeed optionAtIndex:op.emuspeed];
+                     cell.detailTextLabel.text = [Options.arrayEmuSpeed localizedOptionAtIndex:op.emuspeed];
                      break;
                 }
                 case 7:
                 {
                      cell.textLabel.text = NSLocalizedString(@"Sound", @"Audio settings and configuration");
                      cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                     cell.detailTextLabel.text = [Options.arraySoundValue optionAtIndex:op.soundValue];
+                     cell.detailTextLabel.text = [Options.arraySoundValue localizedOptionAtIndex:op.soundValue];
                      break;
                 }
               case 8:

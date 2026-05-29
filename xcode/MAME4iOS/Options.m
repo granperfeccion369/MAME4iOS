@@ -374,35 +374,42 @@
         return defaultObject;
 }
 - (NSString*)optionAtIndex:(NSUInteger)index {
-  NSString *option = [self objectAtIndex:index withDefault:self.firstObject];
-  NSDictionary *localizationMap = @{
-    @"Default": NSLocalizedString(@"Default", @"Default"),
-    @"On (11 KHz)": NSLocalizedString(@"On (11 KHz)", @"On (11 KHz)"),
-    @"On (22 KHz)": NSLocalizedString(@"On (22 KHz)", @"On (22 KHz)"),
-    @"On (33 KHz)": NSLocalizedString(@"On (33 KHz)", @"On (33 KHz)"),
-    @"On (44 KHz)": NSLocalizedString(@"On (44 KHz)", @"On (44 KHz)"),
-    @"On (48 KHz)": NSLocalizedString(@"On (48 KHz)", @"On (48 KHz)")
-  };
-  return localizationMap[option] ?: option;
+    return [self objectAtIndex:index withDefault:self.firstObject];
 }
 
 // find and return option name given a string, default to first if not found
 - (NSString*)optionFind:(NSString*)string {
-  NSString *option = [self objectAtIndex:[self indexOfObject:string] withDefault:self.firstObject];
-  NSDictionary *localizationMap = @{
-      @"Linear": NSLocalizedString(@"Linear", @"Linear filter"),
-      @"Nearest": NSLocalizedString(@"Nearest", @"Nearest"),
-      @"Default": NSLocalizedString(@"Default", @"Default"),
-      @"Light Border": NSLocalizedString(@"Light Border", @"Light Border"),
-      @"Dark Border": NSLocalizedString(@"Dark Border", @"Dark Border"),
-      @"Off": NSLocalizedString(@"Off", @"Off"),
-      @"simpleTron": NSLocalizedString(@"simpleTron", @"simpleTron shader"),
-      @"megaTron": NSLocalizedString(@"megaTron", @"megaTron shader"),
-      @"ulTron": NSLocalizedString(@"ulTron", @""),
-      @"ulTron ": NSLocalizedString(@"ulTron", @""),
-      @"lineTron": NSLocalizedString(@"lineTron", @""),
-      @"None": NSLocalizedString(@"None", @"")
-  };
-  return localizationMap[option] ?: option;
+    return [self objectAtIndex:[self indexOfObject:string] withDefault:self.firstObject];
 }
+
+// Helper method to get a localized display name for an option
+// This should be used in UI code when displaying options to users
+- (NSString*)localizedOptionAtIndex:(NSUInteger)index {
+    NSString *option = [self optionAtIndex:index];
+    return [self localizedNameForOption:option];
+}
+
+// Helper method to get a localized display name for a specific option string
+- (NSString*)localizedNameForOption:(NSString*)option {
+    if (option == nil || option.length == 0)
+        return @"";
+    
+    // Handle compound options (e.g., "megaTron - Grille Mask")
+    // Try each separator and split if found
+    for (NSString* separator in @[@" - ", @" : ", @": ", @" • "]) {
+        if ([option containsString:separator]) {
+            NSArray<NSString*>* parts = [option componentsSeparatedByString:separator];
+            if (parts.count >= 2) {
+                NSString* localizedFirst = NSLocalizedString(parts.firstObject, @"");
+                NSString* localizedLast = NSLocalizedString(parts.lastObject, @"");
+                return [NSString stringWithFormat:@"%@%@%@", localizedFirst, separator, localizedLast];
+            }
+        }
+    }
+    
+    // For simple options, use NSLocalizedString directly
+    // This will use the .strings file for localization
+    return NSLocalizedString(option, @"");
+}
+
 @end

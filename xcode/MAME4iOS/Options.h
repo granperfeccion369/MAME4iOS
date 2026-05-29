@@ -113,6 +113,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSString*)optionAtIndex:(NSUInteger)index;
 // find and return option name given a string, default to first if not found
 - (NSString*)optionFind:(NSString*)string;
+// return a localized display name for the option at index (for UI display only)
+- (NSString*)localizedOptionAtIndex:(NSUInteger)index;
+// return a localized display name for a specific option string (for UI display only)
+- (NSString*)localizedNameForOption:(NSString*)option;
 @end
 
 
